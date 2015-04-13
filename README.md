@@ -1,3 +1,9 @@
+[http://salesforcecapstone2015.github.io/](http://salesforcecapstone2015.github.io/)
+
+# Original documentation for this theme:
+
+<hr />
+
 # [Start Bootstrap](http://startbootstrap.com/) - [Heroic Features](http://startbootstrap.com/template-overviews/heroic-features/)
 
 [Heroic Features](http://startbootstrap.com/template-overviews/heroic-features/) is a multipurpose HTML template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
