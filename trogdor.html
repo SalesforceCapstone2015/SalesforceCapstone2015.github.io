@@ -92,8 +92,30 @@
                 <h3>Salesforce admin console installation</h3>
                 <p>Go to the app exchange</p>
                 <ol>
-                  <li>Do something</li>
-                  <li>Then something else</li>
+                  <li>Create a <a href="https://developer.salesforce.com/signup">new org</a></li>
+                  <li>Install the <a href="https://na17.salesforce.com/packaging/installPackage.apexp?p0=04to00000007Hxe">alpha package</a></li>
+                  <li>Create the ItemHunter site</li>
+                  <ol>
+                    <li>Go to setup -&gt; develop -&gt; sites</li>
+                    <li>Enter a subdomain.</li>
+                    <li>click "new" to create a new site</li>
+                    <li>Enter "ItemHunter" as the site label, site name, and default web address</li>
+                    <li>make sure the site is "active" and that "require https" is enabled</li>
+                    <li>on your new site, goto Public Access Settings -&gt; enabled apex class access (near bottom)</li>
+                    <li>add every class that begins with "Endpoint" (except the Test classes)</li>
+                  </ol>
+                  <li>Add your site's subdomain as a custom setting value</li>
+                  <ol>
+                    <li>Go to setup -&gt; develop -&gt; custom settings</li>
+                    <li>click "ItemHunterSite"</li>
+                    <li>click "manage"</li>
+                    <li>click "new"</li>
+                    <li>as "name" enter "subdomain"</li>
+                    <li>as "value" enter "your-subdomain-.na#", eg "josh-test-ih-developer-edition.na24"</li>
+                  </ol>
+                  <li>Select "Item Hunter" as the app (top right app-selection drop-down)</li>
+                  <li>Click on "Admin Console" in the page tabs</li>
+                  <li>Enjoy!</li>
                 </ol>
             </div>
         </div>
