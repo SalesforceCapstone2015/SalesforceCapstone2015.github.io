@@ -81,45 +81,43 @@
             <!-- Page Features -->
             <div class="row text-center">
     
-                <div id="feature_box_1" class="col-md-4 col-sm-6 hero-feature">
-                    <div class="thumbnail">
+                <div class="col-md-4 col-sm-6 hero-feature">
+                    <div id="feature_box_1" class="thumbnail">
                         <img src="images/item-hunter-icon.png" width="512" height="512" alt="The ItemHunter icon, consisting of a bow and arrow with the initials IH weaved into the arrow.">
                         <div class="caption">
                             <h3>ItemHunter by Trogdor!!</h3>
                             <p>ItemHunter uses the force.com platform as a backend
                                 to host auctions. Bidders use an Android application
                                 to interface with the auction.</p>
-                            <p>
-                              <a href="trogdor"
-                                  class="btn btn-primary">Installation</a>
+                            <p id="feature_box_1_buffer">
+                              <a href="trogdor.html" class="btn btn-primary">Installation</a>
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div id="feature_box_2" class="col-md-4 col-sm-6 hero-feature">
-                    <div class="thumbnail">
-                        <img src="images/bidfresh_small.png" width="512" alt="">
+                <div class="col-md-4 col-sm-6 hero-feature">
+                    <div id="feature_box_2" class="thumbnail">
+                        <img src="images/bidfresh_small.jpg" width="512" height="512" alt="Bidfresh Logo">
                         <div class="caption">
                             <h3>bidfresh by Schoolyard Booleans</h3>
                             <p>The bidfresh silent auction platform has an iPhone application for the bidder's interface, and uses a Nodejs server interacting with Salesforce APEX for the administrator web console.</p>
-                            <p>
-                              <a href="schoolyard-booleans"
-                                  class="btn btn-primary">Installation</a>
+                            <p id="feature_box_2_buffer">
+                              <a href="schoolyard-booleans.html" class="btn btn-primary">Installation</a>
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div id="feature_box_3" class="col-md-4 col-sm-6 hero-feature">
-                    <div class="thumbnail">
+                <div class="col-md-4 col-sm-6 hero-feature">
+                    <div id="feature_box_3" class="thumbnail">
                         <img src="images/bidr.jpg" width="512" height="512" alt="Bidr Logo">
                         <div class="caption">
                             <h3>Bidr by Windows 9</h3>
                             <p>A cloud-based platform for silent auctions which includes a mobile client and administrative backend. Bidr aims to bring silent auctions into the age of technology.</p>
-                            <p>
+                            <p id="feature_box_3_buffer">
                                 <a href="https://bidr.herokuapp.com" class="btn btn-primary">Visit Web Application</a><br />
-                                <a href="windows-9" class="btn btn-primary disabled">Install iOS Application</a>
+                                <a href="windows-9.html" class="btn btn-primary disabled">Install iOS Application</a>
                             </p>
                         </div>
                     </div>
@@ -138,9 +136,10 @@
             // On window resize
             $(window).resize(function () {
                 // Clear all forced heights before recalculating them after window resize
-                $("#feature_box_1").css("height", "");
-                $("#feature_box_2").css("height", "");
-                $("#feature_box_3").css("height", "");
+                
+                $("#feature_box_1_buffer").css("margin-top", "");
+                $("#feature_box_2_buffer").css("margin-top", "");
+                $("#feature_box_3_buffer").css("margin-top", "");
                 feature_box_height();
             });
             
@@ -148,13 +147,19 @@
             function feature_box_height() {
                 var h1 = $("#feature_box_1").height();
                 var h2 = $("#feature_box_2").height();
-                var h3 = $("#feature_box_3").height();
+                var h3 = $("#feature_box_3").height() + 10;
 
                 // Get max height
-                var max_height = Math.max.apply(null, [h1, h2, h3]) + "px";
-                $("#feature_box_1 thumbnail").css("height", max_height);
-                $("#feature_box_2 thumbnail").css("height", max_height);
-                $("#feature_box_3 thumbnail").css("height", max_height);
+                var max_height = Math.max.apply(null, [h1, h2, h3]);
+                
+                // Buffer heights
+                var buffer1 = max_height - h1
+                var buffer2 = max_height - h2
+                var buffer3 = max_height - h3
+                
+                $("#feature_box_1_buffer").css("margin-top", buffer1 + "px");
+                $("#feature_box_2_buffer").css("margin-top", buffer2 + "px");
+                $("#feature_box_3_buffer").css("margin-top", buffer3 + "px");
             }
         </script>
     </body>
