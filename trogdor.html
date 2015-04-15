@@ -23,7 +23,6 @@
     </head>
 
     <body>
-    
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -63,8 +62,8 @@
             <header class="jumbotron hero-spacer">
                 <h1>ItemHunter by Trogdor!!</h1>
                 <p>ItemHunter consists of two components: the admin console and the bidder app. <br><br> 
-    				Silent auction administrators can use the admin console to set auction and item info, keep track of item statuses, and checkout bidders at the end of an auction.<br><br>
-    				Bidders use the mobile app to view and bid on items at the auction. The app enables them to keep track of their bids and be notified when another participant outbids them on an item.</p>
+                    Silent auction administrators can use the admin console to set auction and item info, keep track of item statuses, and checkout bidders at the end of an auction.<br><br>
+                    Bidders use the mobile app to view and bid on items at the auction. The app enables them to keep track of their bids and be notified when another participant outbids them on an item.</p>
             </header>
     
             <hr>
@@ -76,16 +75,16 @@
                     <ol>
                       <li>Request beta access from Joel (<b>jnwilcox@calpoly.edu</b>) or Sterling (<b>starng@calpoly.edu</b>).</li>
                       <li>You will receive an invite to the Trogdor SE Capstone Google group. Accept the invite.</li>
-    						<li>Use your internet browser of choice to access the Google group at <a href="https://groups.google.com/forum/#!forum/trogdor-se-capstone">https://groups.google.com/forum/#!forum/trogdor-se-capstone</a>.</li>
-    						<li>Click on the Play Store link within the group.</li>
-    						<li>You are now ready to install the app via the Play Store.</li>
+                            <li>Use your internet browser of choice to access the Google group at <a href="https://groups.google.com/forum/#!forum/trogdor-se-capstone">https://groups.google.com/forum/#!forum/trogdor-se-capstone</a>.</li>
+                            <li>Click on the Play Store link within the group.</li>
+                            <li>You are now ready to install the app via the Play Store.</li>
                     </ol>
                 </div>
             </div>
     
             <div class="row">
                 <div class="col-lg-12">
-                    <h3>Salesforce admin console installation</h3>
+                    <h3>Salesforce Backend / Admin Console Installation</h3>
                     <p>Go to the app exchange</p>
                     <ol>
                       <li>Create a <a href="https://developer.salesforce.com/signup">new org</a></li>
@@ -96,6 +95,7 @@
                         <li>Enter a subdomain.</li>
                         <li>click "new" to create a new site</li>
                         <li>Enter "ItemHunter" as the site label, site name, and default web address</li>
+                        <li>specify the "Active Site Home Page" as any page&hellip; the value doesn't matter</li>
                         <li>make sure the site is "active" and that "require https" is enabled</li>
                         <li>on your new site, goto Public Access Settings -&gt; enabled apex class access (near bottom)</li>
                         <li>add every class that begins with "Endpoint" (except the Test classes)</li>
@@ -115,12 +115,8 @@
                     </ol>
                 </div>
             </div>
-    
             <hr>
-    
         </div>
-        <!-- /.container -->
-    
         <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
         <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </body>
